@@ -1,7 +1,7 @@
 import json
 
 # parse the nobel-laureates JSON and convert it into a Python Dictionary
-with open('/home/cs143/shared/data/nobel-laureates.json') as fileName:
+with open('/home/cs143/data/nobel-laureates.json') as fileName:
   info = json.load(fileName)
 
 LaureateInfo = info['laureates']
@@ -164,6 +164,7 @@ for item in LaureateInfo:
 
       for a in affiliations:
         # name of the affiliation (i.e. Stanford University)
+        
         if 'name' in a:
           NAME = '"' + a['name']['en'] + '"'
         # name not found
